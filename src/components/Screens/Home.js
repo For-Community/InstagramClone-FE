@@ -15,7 +15,7 @@ const Home = () =>{
                 />
               </div>
               <div className="card-content">
-              <i class="material-icons">favorite</i>
+              <i className="material-icons">favorite</i>
                 <h6>Title</h6>
                 <p>This is an amazing post</p>
                 <input 
@@ -35,7 +35,7 @@ const Home = () =>{
                 />
               </div>
               <div className="card-content">
-              <i class="material-icons">favorite</i>
+              <i className="material-icons">favorite</i>
                 <h6>Title</h6>
                 <p>This is an amazing post</p>
                 <input 
@@ -55,7 +55,7 @@ const Home = () =>{
                 />
               </div>
               <div className="card-content">
-              <i class="material-icons">favorite</i>
+              <i className="material-icons">favorite</i>
                 <h6>Title</h6>
                 <p>This is an amazing post</p>
                 <input 
