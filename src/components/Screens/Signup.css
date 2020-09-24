@@ -19,3 +19,9 @@
     border-bottom: 1px solid rgb(8, 93, 252) !important;
     box-shadow: 0 1px 0 0 rgb(8, 93, 252) !important;
 }
+
+#toast-container{
+    top: 70px !important;
+    right: 20px !important;
+    left: auto !important;
+}
