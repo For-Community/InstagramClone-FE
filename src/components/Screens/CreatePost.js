@@ -15,29 +15,32 @@ const CreatePost = () =>{
         const data = new FormData()
         data.append('file', image)
         data.append('upload_preset','insta-clone')
-        data.append('cloud_name','stephin') //here stephin is the cloud name from cloudinary
-        fetch('https://api.cloudinary.com/v1_1/stephin/image/upload',{
-            method:'post',
-            body: data
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-            setUrl(data.url)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
+        data.append('cloud_name','stephin')//here stephin is the cloud name from cloudinary
+        if(title && body && image){ 
+            fetch('https://api.cloudinary.com/v1_1/stephin/image/upload',{
+                method:'post',
+                body: data
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data)
+                setUrl(data.url)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        }
 
         fetch("/createpost",{
             method:'post',
             headers:{
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": "Bearer "+localStorage.getItem("jwt")
             },
             body: JSON.stringify({
                 title,
                 body,
-                picUrl: url
+                pic: url
             })
         })
         .then(res=>res.json())  //parsing response to json
