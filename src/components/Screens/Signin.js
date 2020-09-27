@@ -10,11 +10,7 @@ const Signin = () =>{
     const [email, setEmail] = useState('')
 
     const PostData = () => {
-        // Email Validity Checking
-        if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
-            M.toast({html:"INVALID EMAIL",classes:"#c62828 red darken-3"})
-            return
-        }
+
         fetch("/signin",{
             method:'post',
             headers:{
@@ -29,7 +25,7 @@ const Signin = () =>{
         .then(data=>{
             console.log(data)
             if(data.error){
-                M.toast({html: data.error, classes: "#c62828 red darken-3"})
+                return M.toast({html: data.error, classes: "#c62828 red darken-3"})
             }
             else{
                 M.toast({html: "Signed In Successfully", classes:"#388e3c green darken-2"})

@@ -11,11 +11,6 @@ const Signup = () =>{
     const [email, setEmail] = useState('')
 
     const PostData = () => {
-        // Email Validity Checking
-        if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
-            M.toast({html:"INVALID EMAIL",classes:"#c62828 red darken-3"})
-            return
-        }
         fetch("/signup",{
             method:'post',
             headers:{
@@ -30,7 +25,7 @@ const Signup = () =>{
         .then(res=>res.json())  //parsing response to json
         .then(data=>{
             if(data.error){
-                M.toast({html: data.error, classes: "#c62828 red darken-3"})
+                return M.toast({html: data.error, classes: "#c62828 red darken-3"})
             }
             else{
                 M.toast({html: data.message, classes:"#388e3c green darken-2"})

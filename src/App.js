@@ -12,22 +12,22 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar />
-      <Route exact path='/'>
-        <Home />
-      </Route>
-      <Route path='/signin'>
-        <Signin />
-      </Route>
-      <Route path='/signup'>
-        <Signup />
-      </Route>
-      <Route path='/profile'>
-        <Profile />
-      </Route>
-      <Route path='/create'>
-        <CreatePost />
-      </Route>
+        <Navbar />
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/signin'>
+          <Signin />
+        </Route>
+        <Route path='/signup'>
+          <Signup />
+        </Route>
+        <Route path='/profile'>
+          <Profile />
+        </Route>
+        <Route path='/create'>
+          <CreatePost />
+        </Route>
       </BrowserRouter>
     </div>
   );
