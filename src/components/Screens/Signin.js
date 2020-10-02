@@ -1,11 +1,12 @@
-import React, {useState, useContext} from 'react'
-import {Link, useHistory} from 'react-router-dom'
-import {UserContext} from '../../App'
-import M from 'materialize-css'
-
 import './Signin.css'
 
-const Signin = () =>{
+import M from 'materialize-css'
+import React, {useContext, useState} from 'react'
+import {Link, useHistory} from 'react-router-dom'
+
+import {UserContext} from '../../App'
+
+const Signin = () => {
     const {state, dispatch} = useContext(UserContext)
     const history = useHistory()
     const [password, setPassword] = useState('')
