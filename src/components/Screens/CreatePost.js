@@ -25,38 +25,37 @@ const CreatePost = () =>{
             .then(data=>{
                 console.log(data)
                 setUrl(data.url)
+                fetch("/createpost",{
+                    method:'post',
+                    headers:{
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer "+localStorage.getItem("jwt")
+                    },
+                    body: JSON.stringify({
+                        title,
+                        body,
+                        pic: data.url
+                    })
+                })
+                .then(res=>res.json())  //parsing response to json
+                .then(data=>{
+                    console.log(data)
+                    if(data.error){
+                        M.toast({html: data.error, classes: "#c62828 red darken-3"})
+                    }
+                    else{
+                        M.toast({html: "Post uploaded successfully", classes:"#388e3c green darken-2"})
+                        history.push('/')
+                    }
+                })
+                .catch(err=>{
+                    console.log(err)
+                })
             })
             .catch(err=>{
                 console.log(err)
             })
         }
-
-        fetch("/createpost",{
-            method:'post',
-            headers:{
-                "Content-Type": "application/json",
-                "Authorization": "Bearer "+localStorage.getItem("jwt")
-            },
-            body: JSON.stringify({
-                title,
-                body,
-                pic: url
-            })
-        })
-        .then(res=>res.json())  //parsing response to json
-        .then(data=>{
-            console.log(data)
-            if(data.error){
-                M.toast({html: data.error, classes: "#c62828 red darken-3"})
-            }
-            else{
-                M.toast({html: "Post uploaded successfully", classes:"#388e3c green darken-2"})
-                history.push('/')
-            }
-        })
-        .catch(err=>{
-            console.log(err)
-        })
     }
 
     return(
