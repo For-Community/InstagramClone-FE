@@ -1,10 +1,9 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
-
 import './Home.css'
 
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 
-const Home = () =>{
+const Home = () => {
    const [posts, setposts] = useState({
      loadedPosts:[
        {user:'Stephin Reji',profile:'https://images.unsplash.com/photo-1550927407-50e2bd128b81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
