@@ -41,7 +41,7 @@ const Home = () =>{
                       type="text"
                       placeholder="Add a comment"
                     />
-                    <h3 className='comment-button'>Post</h3>
+                   
                  </div>
               </div>
             </div>
