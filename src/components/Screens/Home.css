@@ -3,3 +3,43 @@
     height: max-content;
     margin: 26px auto;
 }
+
+.profile-image {
+    border-radius: 80px;
+    height: 30px;
+    width: 30px;
+}
+.like {
+    cursor: pointer;
+}
+.like:hover {
+    color: red;
+}
+
+.comment-button {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ee1e63;
+	border-radius:6px;
+	border:1px solid #ee1e63;
+	display:inline-block;
+	cursor:pointer;
+    color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c70067;
+}
+.comment-button:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+.comment-button:active {
+	position:relative;
+	top:1px;
+}
+.add-comment {
+    display: flex;
+}

@@ -54,7 +54,7 @@ const Signup = () =>{
                 onChange={(e)=>setEmail(e.target.value)}
             />
             <input 
-                type="text"
+                type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e)=>setPassword(e.target.value)}
@@ -65,12 +65,14 @@ const Signup = () =>{
             >
                 Sign Up
             </button>
-
-            <h5>
-                <Link to="/signin"> Already have an account?</Link>
-            </h5>
-
         </div>
+        <Link to='/signin'>
+            <div className='have-account card link'>
+                <h6>
+                    <Link to="/signin">Already have an account? <span className='link'>Sign In</span> </Link>
+                </h6>
+            </div>
+        </Link>
       </div>  
     )
 }

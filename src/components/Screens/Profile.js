@@ -23,15 +23,16 @@ const Profile = () =>{
             </div>
             <div>
               <h4>Stephin Reji</h4>
+              <h3 className='follow-button'>Follow</h3>
               <div 
               style={{
                 display:"flex", 
                 justifyContent:"space-between",
                 width:"108%"
               }}>
-                <h5>40 posts</h5>
-                <h5>40 Followers</h5>
-                <h5>40 Following</h5>
+                <h5 className='link'>40 posts</h5>
+                <h5 className='link'>40 Followers</h5>
+                <h5 className='link'>40 Following</h5>
               </div>
             </div>
           </div>

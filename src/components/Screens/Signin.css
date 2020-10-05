@@ -19,3 +19,18 @@
     border-bottom: 1px solid rgb(8, 93, 252) !important;
     box-shadow: 0 1px 0 0 rgb(8, 93, 252) !important;
 }
+.have-account {
+    margin-top: 25px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 25px auto;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
