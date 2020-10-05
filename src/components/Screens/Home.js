@@ -21,11 +21,7 @@ const Home = () =>{
         posts.loadedPosts.map(post =>(
           <div className="home">
             <div className="card home-card">
-              <Link to='/profile'>
-                  <img className='profile-image' src={post.profile} /> {post.user}
-                  <h6 className='link'> </h6>
-              </Link>
-            
+              <Link to='/profile'><h5> {post.user} </h5></Link>
               <div className="card-image">
                 <img 
                   src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" 
