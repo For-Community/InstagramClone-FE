@@ -1,68 +1,105 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Instagram Clone(Frontend)
 
-## Available Scripts
+This is the frontend repository of an instagram clone Made on MERN stack, for backend repository, please check out [Instagram Clone(BackEnd)](https://github.com/101Loop/InstagramClone-BE) 🎉🎉🎉
 
-In the project directory, you can run:
+We implement features such as:
 
-### `yarn start`
+* Signin 🙋‍♂️
+* Signup 📝
+* Profile 📜
+* Create Post 📰
+* View Posts of Others 👀
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents 📚
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* [Requirement](#Requirement)
+* [Contributing](#Contributing)
+  * [Report Bugs](#Report-Bugs)
+  * [Fix Bugs](#Fix-Bugs)
+  * [Implement Features](#Implement-Features)
+  * [Submit Feedback](#Submit-Feedback)
+* [How to Setup](#How-to-Setup)
+* [Other Repositories](#Other-Repositories)
+* [Contributors](#Contributors)
 
-### `yarn test`
+## Requirement 🔍
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* nodejs 12.x.x or later
+* npm 6.x.x or later
 
-### `yarn build`
+## Contributing ✏️
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributions are welcome, and they are greatly appreciated! Every little bit helps, and credit will always be given.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You can contribute in many ways:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Report Bugs 🐞
 
-### `yarn eject`
+Report bugs at our [issues](https://github.com/101Loop/InstagramClone-FE/issues).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If you are reporting a bug🐝, please include:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Your operating system name and version.
+* Any details about your local setup that might be helpful in troubleshooting.
+* Detailed steps to reproduce the bug.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Fix Bugs 🐛
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Look through our [issues](https://github.com/101Loop/InstagramClone-FE/issues) for bugs. Anything tagged with "bug" is open to whoever wants to implement it.
 
-## Learn More
+### Implement Features 🏷️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Look through our [issues](https://github.com/101Loop/InstagramClone-FE/issues) for features. Anything tagged with "feature" is open to whoever wants to implement it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Submit Feedback 📑
 
-### Code Splitting
+The best way to send feedback is to file an issue at [issues](https://github.com/rolando/scrapy-redis/issues).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+If you are proposing a feature:
 
-### Analyzing the Bundle Size
+* Explain in detail how it would work.
+* Keep the scope as narrow as possible, to make it easier to implement.
+* Remember that this is a volunteer-driven project, and that contributions are welcome :)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## How to Setup 💻
 
-### Making a Progressive Web App
+If you have yarn installed, you can use yarn instead.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+For setting up this repo , you need to clone both [frontend](https://github.com/101Loop/InstagramClone-FE) and [backend](https://github.com/101Loop/InstagramClone-BE) repositories.
 
-### Advanced Configuration
+### Setup Backend ⌨️
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```shell=bash
+git clone https://github.com/101Loop/InstagramClone-BE.git
+cd InstagramClone-BE/
+npm install
+# For Linux & Mac users
+cp keys.js.env keys.js
+# For Windows users
+copy keys.js.env keys.js
+```
 
-### Deployment
+* Open keys.js and modified the elements as below
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+  * \<databaseUsername\> -> Your database user
+  * \<password\> -> Your database password
+  * \<dbname\> -> The database you create
+  * \<YOUR JWT_SECRET KEY(random)\> -> You need to create a JWT token with a secret of at least 14 characters
 
-### `yarn build` fails to minify
+* Start backend server
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```shell=bash
+nodemon app
+```
+
+### Setup Frontend 🖲️
+
+```shell=bash
+cd InstagramClone-FE/
+npm install
+npm start
+```
+
+## Contributors 👨‍👩‍👦‍👦
+
+* [Stephin Reji](https://github.com/stephin007)
