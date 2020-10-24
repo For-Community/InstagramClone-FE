@@ -1,11 +1,12 @@
 import React, {useContext} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import {UserContext} from '../App'
 
 import './Navbar.css'
 
 const Navbar = () =>{
     const {state, dispatch} = useContext(UserContext)
+    const history = useHistory()
     const renderList = ()=>{
         if(state){
             return [
@@ -13,10 +14,11 @@ const Navbar = () =>{
                 <li><Link to="/create">Create Post</Link></li>,
                 <li>
                     <button 
-                        className="btn waves-effect waves-light #64b5f6 blue darken-2"
+                        className="btn #c62828 red darken-3"
                         onClick={()=>{
                             localStorage.clear()
                             dispatch({type: "CLEAR"})
+                            history.push('/signin')
                         }}>
                             SignOut
                     </button>
