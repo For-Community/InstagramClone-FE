@@ -1,3 +1,8 @@
+[![GitHub forks](https://img.shields.io/github/forks/101Loop/InstagramClone-FE)](https://github.com/101Loop/InstagramClone-FE/network)
+[![GitHub issues](https://img.shields.io/github/issues/101Loop/InstagramClone-FE)](https://github.com/101Loop/InstagramClone-FE/issues)
+[![GitHub stars](https://img.shields.io/github/stars/101Loop/InstagramClone-FE)](https://github.com/101Loop/InstagramClone-FE/stargazers)
+[![GitHub license](https://img.shields.io/github/license/101Loop/InstagramClone-FE)](https://github.com/101Loop/InstagramClone-FE/blob/master/LICENSE)
+
 # Instagram Clone(Frontend)
 
 This is the frontend repository of an instagram clone Made on MERN stack, for backend repository, please check out [Instagram Clone(BackEnd)](https://github.com/101Loop/InstagramClone-BE) 🎉🎉🎉
