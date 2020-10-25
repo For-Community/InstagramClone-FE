@@ -5,7 +5,7 @@ import './Home.css'
 
 const Home = () =>{
   const [data, setData] = useState([])
-  const  {state, dispatch}= useContext(UserContext)
+  const  {state}= useContext(UserContext)
   useEffect(()=>{
     fetch('/allpost',{
       headers:{
@@ -71,6 +71,34 @@ const Home = () =>{
       console.log(err)
     })
   }
+
+  const addComment = (text, postId) =>{
+    fetch("/comment",{
+      method:"put",
+      headers:{
+        "Content-Type": "application/json",
+        "Authorization" : "Bearer "+ localStorage.getItem("jwt")
+      },
+      body:JSON.stringify({
+        postId,
+        text
+      })
+    })
+    .then(res=>res.json())
+    .then(result=>{
+      console.log(result)
+      const newData = data.map(item=>{
+        if(item._id == result._id){
+          return result
+        }else{
+          return item
+        }
+      })
+      setData(newData)
+    }).catch(err=>{
+      console.log(err)
+    })
+  }
     return(
       <div>
           <div className="home">
@@ -95,10 +123,22 @@ const Home = () =>{
                       <h6>{item.like.length} Likes</h6>
                       <h6>{item.title}</h6>
                       <p>{item.body}</p>
-                      <input 
-                        type="text"
-                        placeholder="Add a comment"
-                      />
+                      {
+                        item.comment.map(record=>{
+                          return(
+                          <h6 key={record._id}><span style={{fontWeight:"500"}}>{record.postedBy.name}</span> {record.text}</h6>
+                          )
+                        })
+                      }
+                      <form onSubmit={(e)=>{
+                        e.preventDefault()
+                        addComment(e.target[0].value,item._id)
+                      }}>
+                        <input 
+                          type="text"
+                          placeholder="Add a comment"
+                        />
+                      </form>
                     </div>
                   </div>
                 )
