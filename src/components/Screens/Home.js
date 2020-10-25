@@ -26,10 +26,21 @@ const Home = () =>{
       },
       body: JSON.stringify({
         postId: id
-      }).then(res=>res.json())
-      .then(result=>{
-        console.log(result)
       })
+    })
+    .then(res=>res.json())
+    .then(result=>{
+      // console.log(result)
+      const newData = data.map(item=>{
+        if(item._id == result._id){
+          return result
+        }else{
+          return item
+        }
+      })
+      setData(newData)
+    }).catch(err=>{
+      console.log(err)
     })
   }
   const unlikePost = (id) =>{
@@ -41,10 +52,21 @@ const Home = () =>{
       },
       body: JSON.stringify({
         postId: id
-      }).then(res=>res.json())
-      .then(result=>{
-        console.log(result)
       })
+    })
+    .then(res=>res.json())
+    .then(result=>{
+      // console.log(result)
+      const newData = data.map(item=>{
+        if(item._id == result._id){
+          return result
+        }else{
+          return item
+        }
+      })
+      setData(newData)
+    }).catch(err=>{
+      console.log(err)
     })
   }
     return(
@@ -63,8 +85,8 @@ const Home = () =>{
                     </div>
                     <div className="card-content">
                     <i className="material-icons">favorite</i>
-                    <i className="material-icons" onCLick={()=>{likePost(item._id)}}>thumb_up</i>
-                    <i className="material-icons" onCLick={()=>{unlikePost(item._id)}}>thumb_down</i>
+                    <i className="material-icons" onClick={()=>{likePost(item._id)}}>thumb_up</i>
+                    <i className="material-icons" onClick={()=>{unlikePost(item._id)}}>thumb_down</i>
                       <h6>{item.like.length} Likes</h6>
                       <h6>{item.title}</h6>
                       <p>{item.body}</p>
