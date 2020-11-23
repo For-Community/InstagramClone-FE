@@ -67,7 +67,7 @@ const Signup = () =>{
             </button>
 
             <h5>
-                <Link to="/signin"> Already have an account?</Link>
+            Already have an account?<Link to="/signin"> &nbsp;<span style={{color: "blue", textDecoration: "underline", fontSize: 20+"px" }}>sign in</span></Link>
             </h5>
 
         </div>
